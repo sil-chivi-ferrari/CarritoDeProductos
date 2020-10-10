@@ -33,3 +33,9 @@ C:\Users\Chivi\Desktop\TpWInformCrisChivi\TP-winf-IglesiasFerrari\Dominio\obj\De
 C:\Users\Chivi\Desktop\TpWInformCrisChivi\TP-winf-IglesiasFerrari\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Chivi\Desktop\TpWInformCrisChivi\TP-winf-IglesiasFerrari\Dominio\obj\Debug\Dominio.dll
 C:\Users\Chivi\Desktop\TpWInformCrisChivi\TP-winf-IglesiasFerrari\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Cristian\Desktop\Cosas de la facultad\-Programación 3\GIT PROG\CarritoDeProductos\Dominio\bin\Debug\Dominio.dll
+C:\Users\Cristian\Desktop\Cosas de la facultad\-Programación 3\GIT PROG\CarritoDeProductos\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Cristian\Desktop\Cosas de la facultad\-Programación 3\GIT PROG\CarritoDeProductos\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Cristian\Desktop\Cosas de la facultad\-Programación 3\GIT PROG\CarritoDeProductos\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\Desktop\Cosas de la facultad\-Programación 3\GIT PROG\CarritoDeProductos\Dominio\obj\Debug\Dominio.dll
+C:\Users\Cristian\Desktop\Cosas de la facultad\-Programación 3\GIT PROG\CarritoDeProductos\Dominio\obj\Debug\Dominio.pdb
