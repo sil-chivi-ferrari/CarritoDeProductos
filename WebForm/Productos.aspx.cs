@@ -14,8 +14,21 @@ namespace WebForm
         public List<Articulos> ListaArticulos { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            ListaArticulos = negocio.Listar();
+                ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                ListaArticulos = negocio.Listar();
+                Session.Add("ListaArticulos", ListaArticulos);
+            }
+            catch (Exception ex)
+            {
+                Session.Add("ErrorEncontrado",ex.ToString());
+                Response.Redirect("Error.aspx");
+                throw;
+            }
         }
+        
+
+
     }
 }

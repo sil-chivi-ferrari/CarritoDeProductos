@@ -1,14 +1,9 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Productos.aspx.cs" Inherits="WebForm.Productos" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Detalle Producto.aspx.cs" Inherits="WebForm.Detalle_Producto" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="jumbotron">
-        <h1>Fiesta de productos</h1>
-        <p>En esta sección vas a encontrar los productos que querés al mejor precio</p>
-    </div>
-
+      
     <div class="row">
-        <%foreach (Dominio.Articulos item in ListaArticulos)
+     <%--   <%foreach (Dominio.Articulos item in ((List<Dominio.Articulos>)Session["ListaArticulos"])[x])
             {%>
 
         <div class="col-md-4">
@@ -23,12 +18,9 @@
                 </div>
             </div>
         </div>
-       
-        <!-- LE PODRIAMOS PONER BORDER, Y PADDING, YO SE COMO SE HACE "SUPUESTAMETE" PERO ACA NO FUNCIONA-->
-        <% } %>
+        <% } %>--%>
 
 
     </div>
-
 
 </asp:Content>
