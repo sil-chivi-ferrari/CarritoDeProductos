@@ -8,9 +8,6 @@ namespace Dominio
 {
     public class Categoria
     {
-        /// <summary>
-        ///  ahre se agrega así el comentario
-        /// </summary>
         public string Descripcion  { get; set; }
 
         public int  Id { get; set; }

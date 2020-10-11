@@ -79,7 +79,6 @@ namespace Negocio
             Comando.Parameters.AddWithValue("@precio", nuevo.Precio);
             Comando.Connection = Conexion;
             Conexion.Open();
-            //Hola Cristian cotitooo
             Comando.ExecuteNonQuery();
 
         }
@@ -98,7 +97,6 @@ namespace Negocio
                 conexion.agregarParametro("@precio", art.Precio);
                 conexion.agregarParametro("@id", art.Id); 
                 conexion.ejecutarAccion();
-
             }
             catch (Exception ex)
             { throw ex; }
@@ -117,7 +115,6 @@ namespace Negocio
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
 

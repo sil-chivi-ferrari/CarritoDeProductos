@@ -45,9 +45,8 @@ namespace Ventana1
                 Articulos art = (Articulos)dgvGrilla.CurrentRow.DataBoundItem;
                 pbImagen.Load(art.Imagen);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
             }
         }
        
@@ -56,13 +55,8 @@ namespace Ventana1
             fmAlta alta = new fmAlta(); // creo la ventana
             alta.ShowDialog(); // abro la ventana
             Cargar();
-        }
-
-        /// ZONA DE LOS EVENTOS GENERADOS SIN QUERER :)
-          
+        }         
         
-         
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Articulos art;
