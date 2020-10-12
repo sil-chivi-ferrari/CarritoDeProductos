@@ -11,7 +11,7 @@
 
         <%-- <p><a href="https://github.com/sil-chivi-ferrari" class="btn btn-primary btn-lg">Buscame! &raquo;</a></p>--%>
         <a class="btn btn-default" href="https://github.com/sil-chivi-ferrari">Chivi  &raquo;</a>
-        <a class="btn btn-default" href="https://github.com/sil-chivi-ferrari">Cristian &raquo;</a>
+        <a class="btn btn-default" href="https://github.com/CristianIglesias">Cristian &raquo;</a>
     </div>
 
 </asp:Content>

@@ -136,5 +136,10 @@ namespace Ventana1
             modificar.ShowDialog();
             Cargar();
         }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

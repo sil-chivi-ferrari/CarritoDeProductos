@@ -23,11 +23,9 @@
                 </div>
             </div>
         </div>
-       
+
         <!-- LE PODRIAMOS PONER BORDER, Y PADDING, YO SE COMO SE HACE "SUPUESTAMETE" PERO ACA NO FUNCIONA-->
         <% } %>
-
-
     </div>
 
 
