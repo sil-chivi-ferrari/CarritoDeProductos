@@ -24,38 +24,46 @@ namespace Negocio
             Comando.CommandText = "select a.id as IdArt, a.Codigo, a.nombre, a.descripcion, a.imagenurl, a.precio, c.id as IdCategoria, c.Descripcion as Categoria,m.id as IdMarca, m.Descripcion as Marca from ARTICULOS as a join CATEGORIAS c on a.IdCategoria = c.id join MARCAS as m on m.Id = a.IdMarca";
             //se ejecuta la conexion
             Comando.Connection = Conexion;
-            Conexion.Open();
-            //se manda la query a seleccionar registros
-            Lector = Comando.ExecuteReader();
-            
-
-            //Logica una vez conectado, ¿qué tenemos que hacer?
-            while (Lector.Read())
+            try
             {
-                Articulos Aux = new Articulos();
-                ///Tenemos que Instanciar un objeto auxiliar al que asignarle los valores
-                ///leidos y de ahí sumarlo a la lista
-                Aux.Id = (int)Lector["IdArt"];
-                Aux.Codigo = Lector.GetString(1);
-                Aux.Nombre = Lector.GetString(2);
-                Aux.Descripcion = Lector.GetString(3);
-                Aux.Imagen = (string)Lector["ImagenUrl"];
-                Aux.Precio = Lector.GetSqlMoney(5);
-
-                Aux.categoria = new Categoria();
-                Aux.categoria.Id = (int)Lector["IdCategoria"];
-                Aux.categoria.Descripcion = (string)Lector["Categoria"];
- 
-                Aux.Marca = new Marca();
-                Aux.Marca.Descripcion = (string) Lector ["marca"];
-                Aux.Marca.Id = (int)Lector["IdMarca"];
+                Conexion.Open();
+                //se manda la query a seleccionar registros
+                Lector = Comando.ExecuteReader();
 
 
-                lista.Add(Aux);
+                //Logica una vez conectado, ¿qué tenemos que hacer?
+                while (Lector.Read())
+                {
+                    Articulos Aux = new Articulos();
+                    ///Tenemos que Instanciar un objeto auxiliar al que asignarle los valores
+                    ///leidos y de ahí sumarlo a la lista
+                    Aux.Id = (int)Lector["IdArt"];
+                    Aux.Codigo = Lector.GetString(1);
+                    Aux.Nombre = Lector.GetString(2);
+                    Aux.Descripcion = Lector.GetString(3);
+                    Aux.Imagen = (string)Lector["ImagenUrl"];
+                    Aux.Precio = Lector.GetSqlMoney(5);
 
+                    Aux.categoria = new Categoria();
+                    Aux.categoria.Id = (int)Lector["IdCategoria"];
+                    Aux.categoria.Descripcion = (string)Lector["Categoria"];
+
+                    Aux.Marca = new Marca();
+                    Aux.Marca.Descripcion = (string)Lector["marca"];
+                    Aux.Marca.Id = (int)Lector["IdMarca"];
+
+
+                    lista.Add(Aux);
+
+                }
+                Conexion.Close();
+                return lista;
             }
-            Conexion.Close();
-            return lista;
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
         public void agregar(Articulos nuevo)
         {

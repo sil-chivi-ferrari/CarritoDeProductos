@@ -18,7 +18,7 @@
                     <h5 class="card-title"><% = item.Nombre %></h5>
                     <h5 class="card-title"><% = item.Precio %></h5>
                     <a href="#" class="btn btn-primary">Agregalo!</a>
-                    <a href="Detalle Producto.aspx?idArticulo<%=item.Id.ToString()%>" class="btn btn-primary" id="btnDetalle">Detalle Producto</a>
+                    <a href="Detalle Producto.aspx?idArticulo = <%=item.Id.ToString()%>" class="btn btn-primary">Detalle Producto</a>
 
                 </div>
             </div>
