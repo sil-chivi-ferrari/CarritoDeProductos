@@ -34,10 +34,10 @@
 
 
 
-    <div class=" conteiner">
+<%--    <div class="conteiner">
         <div class="jumbotron">
 
-             <img src="<%=articuloDetalle.Imagen %>" alt="alternative-text" width="280">
+            <img src="<%=articuloDetalle.Imagen %>" alt="alternative-text" width="280">
             <h3 class ="display-4" = ><% = articuloDetalle.Nombre %></h3>
             <p class ="lead =" >Precio: $<% = articuloDetalle.Precio %></p>
             <div class="card-body">
@@ -45,7 +45,7 @@
                 
   </div>
 </div>
-        </div>
+        </div>--%>
 
     <%--   <div class="row">
     
@@ -67,7 +67,7 @@
 
 
     </div>--%>
->>>>>>> 4a2435cb67a3f23e8514004107fa4d90e0e60146
+<%-->>>>>>> 4a2435cb67a3f23e8514004107fa4d90e0e60146--%>
 
 
 </asp:Content>

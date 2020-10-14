@@ -11,56 +11,52 @@ namespace WebForm
 {
     public partial class Detalle_Producto : System.Web.UI.Page
     {
-<<<<<<< HEAD
+        ////<<<<<<< HEAD
         public Articulos aMostrar { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           string idItem= Request.QueryString["idArticulo"];
-           try
-           {
-                aMostrar = ((List<Articulos>)Session.Contents["ListaArticulos"]).Find(X => X.Id.ToString().Contains(idItem));
-               if(aMostrar == null)
-               {
-                   Response.Redirect("Error.aspx");
-               }
-
-           }
-           catch (Exception ex) 
-           { 
-
-                   Session.Add("ErrorEncontrado", ex.ToString());
-                   Response.Redirect("Error.aspx");
-                   throw;
-           }
-=======
-        public Articulos articuloDetalle { get; set; }
-        public List<Articulos> ListaDetalle { get; set; }
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            ArticuloNegocio negocioAux = new ArticuloNegocio();
-            List<Articulos> listaAux;
+            string idItem = Request.QueryString["idArticulo"];
             try
             {
-                listaAux = negocioAux.Listar();
-               
-                int idAux = Convert.ToInt32(Request.QueryString["idArticulo"]);
-                articuloDetalle = listaAux.Find(x => x.Id == idAux);
-
-
-
+                aMostrar = ((List<Articulos>)Session.Contents["ListaArticulos"]).Find(X => X.Id.ToString().Contains(idItem));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
+                Session.Add("ErrorEncontrado", ex.ToString());
                 Response.Redirect("Error.aspx");
-
+                throw;
             }
+            //=======
+            //            public Articulos articuloDetalle { get; set; }
+            //public List<Articulos> ListaDetalle { get; set; }
+            //protected void Page_Load(object sender, EventArgs e)
+            //{
+            //    ArticuloNegocio negocioAux = new ArticuloNegocio();
+            //    List<Articulos> listaAux;
+            //    try
+            //    {
+            //        listaAux = negocioAux.Listar();
+            //        int idAux = Convert.ToInt32(Request.QueryString["?idArticulo"]);
+            //        articuloDetalle = new Articulos();
+            //        articuloDetalle = listaAux.Find(x => x.Id == idAux);
 
 
->>>>>>> 4a2435cb67a3f23e8514004107fa4d90e0e60146
+
+            //    }
+            //    catch (Exception)
+            //    {
+
+            //        Response.Redirect("Error.aspx");
+
+            //    }
+
+
+            ////>>>>>>> 4a2435cb67a3f23e8514004107fa4d90e0e60146
         }
 
-    
+
     }
 }
+    
