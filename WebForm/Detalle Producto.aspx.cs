@@ -29,26 +29,26 @@ namespace WebForm
                 throw;
             }
             //=======
-            //            public Articulos articuloDetalle { get; set; }
-            //public List<Articulos> ListaDetalle { get; set; }
-            //protected void Page_Load(object sender, EventArgs e)
+            //            public articulos articulodetalle { get; set; }
+            //public list<articulos> listadetalle { get; set; }
+            //protected void page_load(object sender, eventargs e)
             //{
-            //    ArticuloNegocio negocioAux = new ArticuloNegocio();
-            //    List<Articulos> listaAux;
+            //    articulonegocio negocioaux = new articulonegocio();
+            //    list<articulos> listaaux;
             //    try
             //    {
-            //        listaAux = negocioAux.Listar();
-            //        int idAux = Convert.ToInt32(Request.QueryString["?idArticulo"]);
-            //        articuloDetalle = new Articulos();
-            //        articuloDetalle = listaAux.Find(x => x.Id == idAux);
+            //        listaaux = negocioaux.listar();
+            //        int idaux = convert.toint32(request.querystring["?idarticulo"]);
+            //        articulodetalle = new articulos();
+            //        articulodetalle = listaaux.find(x => x.id == idaux);
 
 
 
             //    }
-            //    catch (Exception)
+            //    catch (exception)
             //    {
 
-            //        Response.Redirect("Error.aspx");
+            //        response.redirect("error.aspx");
 
             //    }
 
