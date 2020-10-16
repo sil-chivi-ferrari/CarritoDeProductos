@@ -16,7 +16,7 @@
                         <h5 class="card-title"><% = item.Precio %></h5>
                         <h5 class="card-title"><%= item.categoria %></h5>
                         <h5 class="card-title"><%= item.Marca %></h5>
-                        <a href="#" class="btn btn-primary">Agregalo!</a>
+                         <a href="Carrito.aspx?idArticulo=<%=item.Id.ToString()%>" class="btn btn-primary">Agregalo!</a>
                         <a href="Productos.aspx" class="btn btn.primary">Volver</a>
           <%}
               else
@@ -29,25 +29,4 @@
         </div>
     </div>
 
-      <%--<div class="row">
-    
-
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="<%=articuloDetalle.Imagen %>" class="card-img-top" alt="alternative-text" width="280">
-                <div class="card-body">
-                    <h5 class="card-title"><% = articuloDetalle.Nombre %></h5>
-                    <h5 class="card-title"><% = articuloDetalle.Precio %></h5>
-                     <h5 class="card-title"><% = articuloDetalle.Descripcion %></h5>
-                  <%--  <a href="#" class="btn btn-primary">Agregalo!</a>--%>
-
-
-                </div>
-            </div>
-        </div>
-     
-
-
-    </div>--%>
- 
 </asp:Content>

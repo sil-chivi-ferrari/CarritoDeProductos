@@ -9,8 +9,9 @@ using Negocio;
 
 namespace WebForm
 {
-    public partial class Agregar : System.Web.UI.Page
+    public partial class Carrito : System.Web.UI.Page
     {
+
         public Articulos artBuscado { get; set; }
         public List<Articulos> ListaCarrito { get; set; }
 
@@ -21,7 +22,6 @@ namespace WebForm
             try
             {
                 listaAux = negocioAux.Listar();
-
                 int idAux = Convert.ToInt32(Request.QueryString["idArticulo"]);
                 artBuscado = listaAux.Find(x => x.Id == idAux);
 
@@ -29,12 +29,14 @@ namespace WebForm
                 {
                     ListaCarrito = new List<Articulos>();// instancio con una lista vacia
                     Session.Add("ListArtAgregados", ListaCarrito);
+                    
                 }
                 else
                 {
                     ListaCarrito = (List<Articulos>)Session["ListArtAgregados"];
                     ListaCarrito.Add(artBuscado);
                     Session["ListArtAgregados"] = ListaCarrito;
+
                 }
 
 
@@ -45,7 +47,6 @@ namespace WebForm
                 Response.Redirect("Error.aspx");
 
             }
-
         }
     }
 }
