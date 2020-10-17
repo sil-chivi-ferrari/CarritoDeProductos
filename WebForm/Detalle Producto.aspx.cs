@@ -22,7 +22,7 @@ namespace WebForm
             }
             catch (Exception ex)
             {
-
+                
                 Session.Add("ErrorEncontrado", ex.ToString());
                 Response.Redirect("Error.aspx");
                 throw;

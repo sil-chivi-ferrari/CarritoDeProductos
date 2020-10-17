@@ -17,7 +17,8 @@
                         <h5 class="card-title"><%= item.categoria %></h5>
                         <h5 class="card-title"><%= item.Marca %></h5>
                          <a href="Carrito.aspx?idArticulo=<%=item.Id.ToString()%>" class="btn btn-primary">Agregalo!</a>
-                        <a href="Productos.aspx" class="btn btn.primary">Volver</a>
+                        <a href="Productos.aspx" class="btn btn-primary">Volver</a>
+
           <%}
               else
               {

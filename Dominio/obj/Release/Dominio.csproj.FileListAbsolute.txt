@@ -1,0 +1,6 @@
+C:\Users\Chivi\Desktop\TpWInformCrisChivi\TP-winf-IglesiasFerrari\Dominio\bin\Release\Dominio.dll
+C:\Users\Chivi\Desktop\TpWInformCrisChivi\TP-winf-IglesiasFerrari\Dominio\bin\Release\Dominio.pdb
+C:\Users\Chivi\Desktop\TpWInformCrisChivi\TP-winf-IglesiasFerrari\Dominio\obj\Release\Dominio.csprojAssemblyReference.cache
+C:\Users\Chivi\Desktop\TpWInformCrisChivi\TP-winf-IglesiasFerrari\Dominio\obj\Release\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Chivi\Desktop\TpWInformCrisChivi\TP-winf-IglesiasFerrari\Dominio\obj\Release\Dominio.dll
+C:\Users\Chivi\Desktop\TpWInformCrisChivi\TP-winf-IglesiasFerrari\Dominio\obj\Release\Dominio.pdb

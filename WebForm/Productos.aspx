@@ -3,6 +3,8 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
+        <asp:TextBox runat="server" ID="txtBuscar" />
+        <asp:Button Text="Buscar" ID="btnBuscar" Onclick="btnBuscar_Click" runat="server" />
         <h1>Fiesta de productos</h1>
         <p>En esta sección vas a encontrar los productos que querés al mejor precio</p>
     </div>
@@ -16,8 +18,7 @@
                 <img src="<%=item.Imagen %>" class="card-img-top" alt="alternative-text" width="280">
                 <div class="card-body">
                     <h5 class="card-title"><% = item.Nombre %></h5>
-                    <h5 class="card-title"><% = item.Precio %></h5>
-                   
+                    <h5 class="card-title"><% = item.Precio %></h5>                   
                     <a href="Detalle Producto.aspx?idArticulo=<%=item.Id.ToString()%>" class="btn btn-primary">Detalle Producto</a> <%-- El espacio es importante.--%>
                     <a href="Carrito.aspx?idArticulo=<%=item.Id.ToString()%>" class="btn btn-primary">Agregar</a>
 

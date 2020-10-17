@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,41 +13,76 @@ namespace WebForm
     public partial class Carrito : System.Web.UI.Page
     {
 
-        public Articulos artBuscado { get; set; }
-        public List<Articulos> ListaCarrito { get; set; }
+        public Articulos artBuscado;
+        public List<Articulos> ListaCarrito;
+        int idAux;
+        int extra;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocioAux = new ArticuloNegocio();
             List<Articulos> listaAux;
-            try
+
+            extra = Convert.ToInt32(Request.QueryString["extra"]);
+            idAux = Convert.ToInt32(Request.QueryString["idArticulo"]);
+            listaAux = negocioAux.Listar();
+            artBuscado = listaAux.Find(x => x.Id == idAux);
+            if (idAux != 0 && extra == 1)
             {
-                listaAux = negocioAux.Listar();
-                int idAux = Convert.ToInt32(Request.QueryString["idArticulo"]);
-                artBuscado = listaAux.Find(x => x.Id == idAux);
-
-                if (Session["ListArtAgregados"] == null)
+                try
                 {
-                    ListaCarrito = new List<Articulos>();// instancio con una lista vacia
-                    Session.Add("ListArtAgregados", ListaCarrito);
-                    
+                    ListaCarrito = ((List<Articulos>)Session["ListArtAgregados"]);
+                    foreach (Articulos Item in ListaCarrito)
+                    {
+                        if (Item.Id == idAux)
+                        {
+                            ListaCarrito.Remove(Item);
+                            Session.Add("ListArtAgregados", ListaCarrito);
+                            Response.Redirect("Carrito.aspx");
+                        }
+                    }
                 }
-                else
+                catch (Exception ex )
                 {
-                    ListaCarrito = (List<Articulos>)Session["ListArtAgregados"];
-                    ListaCarrito.Add(artBuscado);
-                    Session["ListArtAgregados"] = ListaCarrito;
-
+                    throw ex;
+                    //Response.Redirect("Error.aspx");
                 }
-
+            }
+            else if (idAux == 0)
+            {
+                ListaCarrito = (List<Articulos>) Session["ListArtAgregados"];
 
             }
-            catch (Exception)
+            else
             {
+                try
+                {
 
-                Response.Redirect("Error.aspx");
+                    if (Session["ListArtAgregados"] == null)
+                    {
+                        ListaCarrito = new List<Articulos>();// instancio con una lista vacia
+                        ListaCarrito.Add(artBuscado);
+                        Session.Add("ListArtAgregados", ListaCarrito);
 
+
+                    }
+                    else
+                    {
+                        ListaCarrito = (List<Articulos>)Session["ListArtAgregados"];
+                        ListaCarrito.Add(artBuscado);
+                        Session["ListArtAgregados"] = ListaCarrito;
+
+                    }
+
+
+                }
+                catch (Exception)
+                {
+
+                    Response.Redirect("Error.aspx");
+
+                }
+            }
             }
         }
-    }
-}
+    } 
