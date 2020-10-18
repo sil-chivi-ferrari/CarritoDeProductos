@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <asp:TextBox runat="server" Width="10000" ID="txtBuscar" />
+        <asp:TextBox runat="server" placeholder="Buscar productos, marcas y más…" Width="10000" ID="txtBuscar" />
         <asp:Button class="btn btn-primary" Text="Buscar" ID="btnBuscar" OnClick="btnBuscar_Click" runat="server" />
         <h1>Fiesta de productos</h1>
         <p>En esta sección vas a encontrar los productos que querés al mejor precio</p>
