@@ -42,7 +42,7 @@ namespace WebForm
                         }
                     }
                 }
-                catch (Exception ex )
+                catch (Exception ex)
                 {
                     throw ex;
                     //Response.Redirect("Error.aspx");
@@ -50,7 +50,15 @@ namespace WebForm
             }
             else if (idAux == 0)//Esto es cuando entra sin querer agregar, tipo para ver los articulos que estén cargados en el carro.
             {
-                ListaCarrito = (List<Articulos>) Session["ListArtAgregados"];
+                if (Session["ListArtAgregados"] == null) //Si la lista no llegó a instanciarse
+                {
+                    ListaCarrito = new List<Articulos>();
+                    Session["ListArtAgregados"] = ListaCarrito;
+                }
+                else
+                
+                { ListaCarrito = (List<Articulos>)Session["ListArtAgregados"]; }
+
             }
             else //Esto Agrega items al carro.
             {
