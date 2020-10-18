@@ -11,8 +11,8 @@
                     <div class="card" style="width: 18rem;">
                         <img src="<%=item.Imagen %>" class="card-img-top" alt="alternative-text" width="280">
                         <div class="card-body">
-                            <h5 class="card-title"><% = item.Nombre %></h5>
-                            <h5 class="card-title"><% = item.Precio %></h5>
+                            <h5 class="card-title"style="font-weight: bold"><% = item.Nombre %></h5>
+                            <h5 class="card-title"style="font-weight: bold"><% = item.Precio %></h5>
                             <a href="Carrito.aspx?idArticulo=<%=item.Id.ToString()%>&extra=<%=1.ToString() %>" class="btn btn-danger">Eliminar</a>
                             <a href="Productos.aspx?" class="btn btn-primary">Volver</a>
                         </div>
