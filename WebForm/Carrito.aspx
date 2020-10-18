@@ -2,9 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div>
-        <%--    ESTO NO TIENE QUE IR COMO MATRIZ, SINO UNO ABAJO EL OTRO        --%>
         <div class="row">
-            <p>Cantidad De Articulos  <%  %></p>
             <%foreach (Dominio.Articulos item in ListaCarrito)
                 {%>
 
@@ -20,8 +18,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <% } %>
         </div>
-        <% } %>
-    </div>
+        <div class="jumbotron">
+            <asp:Label Text="Cantidad Articulos  " ID="lblCantidadItemsCarro" Font-Bold ="true" runat="server" />
+            <br />
+            <asp:Label Text="Importe Acumulado  " ID="lblImporteAcu" Font-Bold ="true" runat="server" />
+        </div>
     </div>
 </asp:Content>

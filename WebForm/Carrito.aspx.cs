@@ -17,17 +17,17 @@ namespace WebForm
         public List<Articulos> ListaCarrito;
         int idAux;
         int extra;
-
+        Carro Carrin;
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocioAux = new ArticuloNegocio();
+            Carrin = new Carro();
             List<Articulos> listaAux;
-
             extra = Convert.ToInt32(Request.QueryString["extra"]);
             idAux = Convert.ToInt32(Request.QueryString["idArticulo"]);
             listaAux = negocioAux.Listar();
             artBuscado = listaAux.Find(x => x.Id == idAux);
-            if (idAux != 0 && extra == 1)
+            if (idAux != 0 && extra == 1)///Esto Elimina.
             {
                 try
                 {
@@ -48,25 +48,23 @@ namespace WebForm
                     //Response.Redirect("Error.aspx");
                 }
             }
-            else if (idAux == 0)
+            else if (idAux == 0)//Esto es cuando entra sin querer agregar, tipo para ver los articulos que estén cargados en el carro.
             {
                 ListaCarrito = (List<Articulos>) Session["ListArtAgregados"];
-
             }
-            else
+            else //Esto Agrega items al carro.
             {
                 try
                 {
 
-                    if (Session["ListArtAgregados"] == null)
+                    if (Session["ListArtAgregados"] == null) //Si es el Primer item.
                     {
-                        ListaCarrito = new List<Articulos>();// instancio con una lista vacia
+                        ListaCarrito = new List<Articulos>();
                         ListaCarrito.Add(artBuscado);
-                        Session.Add("ListArtAgregados", ListaCarrito);
-
+                        Session["ListArtAgregados"] = ListaCarrito;
 
                     }
-                    else
+                    else //Si el carro ya tenía algo adentro.
                     {
                         ListaCarrito = (List<Articulos>)Session["ListArtAgregados"];
                         ListaCarrito.Add(artBuscado);
@@ -83,6 +81,13 @@ namespace WebForm
 
                 }
             }
+            foreach (Articulos item in ListaCarrito)
+            {
+                Carrin.ImporteTotal += item.Precio;
+                Carrin.CantidadItems++;
             }
+            lblCantidadItemsCarro.Text += (Carrin.CantidadItems);
+            lblImporteAcu.Text += (Carrin.ImporteTotal);
+        }
         }
     } 
