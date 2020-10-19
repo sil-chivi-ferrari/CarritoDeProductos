@@ -2,8 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
-    <div class="jumbotron">
-        <h1>El Articulo que seleccionaste es:</h1>
+    <div >
+        <h1>Seleccionaste:</h1>
         <div class="row">
           <%if (aMostrar != null)
               {

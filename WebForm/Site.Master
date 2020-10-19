@@ -17,7 +17,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <%--<link rel="shortcut icon" type="image/x-icon" href="/imagenes/icon1.ico" />--%>
 </head>
-<body style="background-image: url('https://thumbs.dreamstime.com/b/pared-de-cemento-azul-superficie-dura-parece-arena-dise-o-la-textura-del-fondo-celeste-y-155656230.jpg');">
+<body style="background-image: url('https://images.unsplash.com/photo-1560780552-ba54683cb263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');">
    <%--https://i.pinimg.com/564x/9b/c9/8f/9bc98f55db5737c6b9601ea215f14467.jpg--%>
     <form runat="server">
         <asp:ScriptManager runat="server">
