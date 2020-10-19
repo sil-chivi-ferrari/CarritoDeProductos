@@ -3,10 +3,10 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div>
         <div class="row">
-            <%foreach (Dominio.Articulos item in ListaCarrito)
-
+            
+            <% 
+                foreach (Dominio.Articulos item in ListaCarrito)
                 {
-
             %>
             <div class="col-md-4">
                 <div class="row">
